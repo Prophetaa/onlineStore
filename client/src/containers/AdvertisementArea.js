@@ -7,7 +7,9 @@ export default function AdvertisementArea(props) {
         <ul>
           {props.advertisementsToShow.map(ad => ( 
             <div className="AddDiv">
-            <img className="AddImage" src={ad.pictureURL}/>
+            <div className="ImageDiv">
+            <img alt="" className="AddImage" src={ad.pictureURL}/> 
+            </div>
             <li key={ad.id} onClick={() => props.getAd(ad.id)}>
               <h2 className="title">{ad.title}</h2> <span className="AddsPrice"> {ad.price} €</span>
             </li>

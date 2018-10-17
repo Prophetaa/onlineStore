@@ -2,10 +2,12 @@
   "name": "my-store",
   "version": "0.1.0",
   "private": true,
+  "cors": true,
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@material-ui/icons": "latest",
     "cors": "^2.8.4",
+    "kcors": "^2.2.2",
     "prop-types": "latest",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

@@ -5,9 +5,8 @@ import setupDb from './db'
 import AdvertisementController from './advertisements/controllers';
 
 const app = createKoaServer({
-  controllers: [
-    AdvertisementController
-  ]
+  cors: true,
+ controllers: [AdvertisementController]
 })
 
 setupDb()

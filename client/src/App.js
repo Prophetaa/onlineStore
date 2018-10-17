@@ -25,7 +25,4 @@ class App extends Component {
 
 
 
-export default App /*connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App); */
+export default App
