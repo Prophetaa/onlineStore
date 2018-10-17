@@ -6,35 +6,17 @@ import { Route } from "react-router-dom"
 import MainButtonsContainer from "./containers/MainButtonsContainer"
 import AdvertisementsContainer from "./containers/AdvertisementsContainer"
 
-
+import setAllAdds from "./reducers/index.js"
 
 class App extends Component {
 
   componentDidMount() {
     request
-      .get("https://dog.ceo/api/breeds/list/all")
+      .get("https://localhost/advertisements")
       .then(res => {
-        this.props.setAllBreeds(res.body.message);
+        this.props.setAllAdds(res.body.message);
       })
-      .then(() =>
-        this.props.addThreeUniques(
-          this.props.allBreeds,
-          this.props.selectedBreeds
-        )
-      )
-      .then(() => {
-        this.props.addImagesToTempSelectedBreeds(this.props.tempSelectedBreeds);
-      })
-      .then(() => this.nextQuestion());
   }
-
-
-
-
-
-
-
-
 
   render() {
     return (
@@ -55,7 +37,7 @@ class App extends Component {
 
 const mapStateToProps = ({})
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = { setAllAdds }
 
 export default App /*connect(
   mapStateToProps,
