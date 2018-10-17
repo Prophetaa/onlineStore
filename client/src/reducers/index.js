@@ -1,8 +1,10 @@
 import {combineReducers} from "redux";
 
-import AdsReducer from "./AdsReducer"
+import advertisements from "./AdsReducer"
+import AdToShow from "./AdRedudcer"
 
 export default combineReducers({
-  AdsReducer
+  advertisements,
+  AdToShow
   });
   

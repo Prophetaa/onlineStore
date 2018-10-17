@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.2.2",
     "@material-ui/icons": "latest",
+    "cors": "^2.8.4",
     "prop-types": "latest",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

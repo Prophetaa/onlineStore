@@ -9,6 +9,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { withStyles } from "@material-ui/core/styles";
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   root: {
@@ -66,9 +67,8 @@ class MenuListComposition extends React.Component {
                 <Paper>
                   <ClickAwayListener onClickAway={this.handleClose}>
                     <MenuList>
-                      <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-                      <MenuItem onClick={this.handleClose}>My account</MenuItem>
-                      <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+                    <Link className="Links" to="/"><MenuItem onClick={this.handleClose}>Home</MenuItem></Link>
+                    <Link className="Links" to="/account"><MenuItem onClick={this.handleClose}>My account</MenuItem></Link>
                     </MenuList>
                   </ClickAwayListener>
                 </Paper>
